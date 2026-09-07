@@ -9,11 +9,11 @@
 @import url('https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Manrope:wght@400;500;600;700;800&family=Unbounded:wght@400;500;600;700&display=swap');
 
 :root{
-  --bg:#e9e6df;
-  --paper:#f5f2ec;
-  --ink:#151515;
-  --muted:#706d67;
-  --line:rgba(21,21,21,.18);
+  --bg:#252525;
+  --paper:#3d3d3d;
+  --ink:#ffffff;
+  --muted:#d0d0d0;
+  --line:rgba(213,255,63,.34);
   --dark:#171717;
   --accent:#d5ff3f;
   --accent-ink:#718800;
@@ -45,21 +45,21 @@ img{max-width:100%;display:block}
   position:fixed;top:0;left:0;width:100%;height:76px;z-index:50;
   display:flex;align-items:center;justify-content:space-between;
   padding:0 4vw;border-bottom:1px solid var(--line);
-  background:rgba(233,230,223,.88);backdrop-filter:blur(14px);
+  background:rgba(23,23,23,.92);backdrop-filter:blur(14px);
 }
 .wordmark{font:500 18px var(--mono);letter-spacing:-1px}
 .wordmark span{color:#8b8b84}
 nav{display:flex;gap:26px}
 nav a,.email-link{font:500 11px var(--mono);text-transform:uppercase;letter-spacing:.06em}
 nav a{position:relative}
-nav a:after{content:"";position:absolute;left:0;bottom:-5px;width:0;height:1px;background:#111;transition:.25s}
+nav a:after{content:"";position:absolute;left:0;bottom:-5px;width:0;height:1px;background:var(--accent);transition:.25s}
 nav a:hover:after{width:100%}
-.email-link{padding:11px 16px;background:var(--dark);color:white}
+.email-link{padding:11px 16px;background:var(--dark);color:white;border:1px solid var(--accent)}
 main{position:relative;z-index:1}
 .hero{
   min-height:100vh;padding:130px 4vw 70px;display:grid;
   grid-template-columns:1.05fr .95fr;align-items:center;gap:4vw;
-  position:relative;overflow:hidden;
+  position:relative;overflow:hidden;background:var(--dark);
 }
 .hero:before,.hero:after{
   content:"";position:absolute;left:4vw;right:4vw;height:1px;background:var(--line)
@@ -77,25 +77,25 @@ main{position:relative;z-index:1}
 }
 .hero h1 span{padding-left:10vw}
 .hero-role{font:500 12px/1.65 var(--mono);letter-spacing:.04em;margin:0 0 26px}
-.lede{max-width:650px;font-size:17px;line-height:1.65;margin:0;color:#333}
+.lede{max-width:650px;font-size:17px;line-height:1.65;margin:0;color:#f0f0f0}
 .hero-actions{display:flex;align-items:center;gap:26px;margin-top:34px;flex-wrap:wrap}
 .button{
   display:inline-flex;align-items:center;gap:28px;padding:16px 20px;
   font:500 11px var(--mono);letter-spacing:.04em;text-transform:uppercase;
 }
-.button-dark{background:var(--dark);color:#fff}
+.button-dark{background:var(--dark);color:#fff;border:1px solid var(--accent)}
 .button b{font-size:17px}
-.under-link{font:500 11px var(--mono);border-bottom:1px solid #111;padding-bottom:5px}
+.under-link{font:500 11px var(--mono);border-bottom:1px solid var(--accent);padding-bottom:5px}
 .hero-object{position:relative;width:min(100%,500px);justify-self:end;aspect-ratio:1/1.12}
 .object-circle{position:absolute;border:1px solid var(--line);border-radius:50%;left:50%;top:50%;transform:translate(-50%,-50%)}
 .object-circle.outer{width:94%;aspect-ratio:1}.object-circle.inner{width:73%;aspect-ratio:1}
 .object-axis{position:absolute;left:50%;top:0;bottom:0;width:1px;background:var(--line)}
 .portrait-frame{
-  position:absolute;inset:9% 13%;overflow:hidden;background:#c9c6bd;
+  position:absolute;inset:9% 13%;overflow:hidden;background:#4a4a4a;
   clip-path:polygon(4% 0,100% 0,96% 100%,0 100%);
 }
 .portrait-frame img{width:100%;height:100%;object-fit:cover;object-position:center 24%;filter:saturate(.8) contrast(1.04)}
-.object-note{position:absolute;font:500 9px/1.5 var(--mono);letter-spacing:.08em;color:#555}
+.object-note{position:absolute;font:500 9px/1.5 var(--mono);letter-spacing:.08em;color:#f0f0f0}
 .object-note.top{top:8%;left:-2%}.object-note.bottom{bottom:8%;right:-2%}
 .signal{position:absolute;width:7px;height:7px;border-radius:50%;background:var(--accent);box-shadow:0 0 0 5px rgba(213,255,63,.15)}
 .signal.one{top:17%;right:7%}.signal.two{bottom:21%;left:7%}.signal.three{top:54%;left:0}
@@ -109,8 +109,8 @@ main{position:relative;z-index:1}
 .profile h2,.project-head h2,.impact h2,.experience h2,.skills h2,.credentials h2,.press h2,.education h2,.contact h2{
   font:500 clamp(34px,4.4vw,70px)/1.05 var(--display);letter-spacing:-.065em;margin:0;text-transform:uppercase
 }
-h2 em{font-style:normal;color:#777}
-.profile-copy>p:last-child{font-size:17px;line-height:1.7;max-width:720px;color:#3b3936}
+h2 em{font-style:normal;color:var(--accent)}
+.profile-copy>p:last-child{font-size:17px;line-height:1.7;max-width:720px;color:#f0f0f0}
 .stats{margin:50px 0 0;padding:0;border-top:1px solid var(--line)}
 .stats div{padding:21px 0;border-bottom:1px solid var(--line)}
 .stats dt{font:600 29px var(--display);letter-spacing:-.06em}
@@ -137,10 +137,10 @@ h2 em{font-style:normal;color:#777}
 .arch-v span{color:#171717;font-size:17px}
 .project-copy .tag{font:500 9px var(--mono);color:var(--muted);letter-spacing:.08em}
 .project-copy h3{font:600 25px var(--display);letter-spacing:-.06em;margin:10px 0}
-.project-copy>p:last-child{font-size:14px;line-height:1.6;max-width:600px;color:#555}
-.open{text-align:right;color:#222}
+.project-copy>p:last-child{font-size:14px;line-height:1.6;max-width:600px;color:#f0f0f0}
+.open{text-align:right;color:#f0f0f0}
 .impact{background:var(--dark);color:#f3f1ec;display:grid;grid-template-columns:.8fr 1.2fr;gap:9vw}
-.impact .kicker{color:#9d9d96}.impact h2 em{color:#9a9a92}
+.impact .kicker{color:#9d9d96}.impact h2 em{color:var(--accent)}
 .impact-list{border-top:1px solid rgba(255,255,255,.18)}
 .impact-card{padding:25px 0;border-bottom:1px solid rgba(255,255,255,.18)}
 .impact-card span{font:500 9px var(--mono);color:var(--accent);letter-spacing:.1em}
@@ -150,10 +150,10 @@ h2 em{font-style:normal;color:#777}
 .timeline{border-top:1px solid var(--line)}
 .role{display:grid;grid-template-columns:130px 110px 1fr 35px;gap:22px;padding:27px 0;border-bottom:1px solid var(--line);align-items:start}
 .role-date,.company-logo,.role-id{font:500 10px var(--mono);color:var(--muted)}
-.company-logo{color:#171717;font-weight:500;line-height:1.1}
+.company-logo{color:#f0f0f0;font-weight:500;line-height:1.1}
 .company-logo img{display:block;width:76px;height:55px;object-fit:contain;object-position:center}
-.role-main h3{margin:0;font-size:19px}.role-main .company{font-size:11px;font-family:var(--mono);color:#777;margin:7px 0 11px}
-.role-main>p:last-child{margin:0;font-size:13px;line-height:1.55;color:#555}
+.role-main h3{margin:0;font-size:19px}.role-main .company{font-size:11px;font-family:var(--mono);color:var(--accent);margin:7px 0 11px}
+.role-main>p:last-child{margin:0;font-size:13px;line-height:1.55;color:#f0f0f0}
 .role-id{text-align:right}
 .skills{display:grid;grid-template-columns:.7fr 1.3fr;gap:9vw}
 .skill-columns{display:grid;grid-template-columns:repeat(3,1fr);border-top:1px solid var(--line)}
@@ -162,7 +162,7 @@ h2 em{font-style:normal;color:#777}
 .skill-columns>div:last-child{border-right:0}
 .skill-columns span{font:500 10px var(--mono);color:var(--muted)}
 .skill-columns h3{font:500 18px var(--display);letter-spacing:-.05em;margin:35px 0 14px}
-.skill-columns p{font-size:13px;line-height:1.65;color:#555}
+.skill-columns p{font-size:13px;line-height:1.65;color:#f0f0f0}
 .credentials{background:#1b1b1b;color:#f5f2ec}
 .credentials .kicker{color:#aaa}.credentials h2 em{color:var(--accent)}
 .credentials-heading{margin-bottom:45px}
@@ -203,16 +203,16 @@ h2 em{font-style:normal;color:#777}
 .press-card:hover{background:var(--dark);color:#fff}
 .press-card span,.press-card b{font:500 9px var(--mono);letter-spacing:.08em;color:var(--muted)}
 .press-card h3{font:500 20px/1.15 var(--display);letter-spacing:-.055em;margin:25px 0 10px}
-.press-card p{font-size:13px;line-height:1.55;color:#555;margin:0}
+.press-card p{font-size:13px;line-height:1.55;color:#f0f0f0;margin:0}
 .press-card:hover p,.press-card:hover span{color:#bbb8b2}.press-card:hover b{color:var(--accent)}
-.education{background:#dedbd3}
+.education{background:#3d3d3d}
 .education-grid{display:grid;grid-template-columns:1fr;gap:0;border-top:1px solid var(--line)}
 .education-grid>div{padding:27px 25px;border-bottom:1px solid var(--line)}
 .education-grid>div:nth-child(odd){border-right:0;padding-left:0}
 .education-grid span{font:500 11px var(--mono);color:var(--muted)}
-.education-grid h3{font-size:24px;margin:18px 0 10px}.education-grid p{margin:0;color:#666;font-size:16px;line-height:1.65}
+.education-grid h3{font-size:24px;margin:18px 0 10px}.education-grid p{margin:0;color:#f0f0f0;font-size:16px;line-height:1.65}
 .course-list{grid-column:auto;padding-left:0!important}
-.course-list ul{margin:15px 0 0;padding-left:18px;color:#555;font-size:13px;line-height:1.8}
+.course-list ul{margin:15px 0 0;padding-left:18px;color:#f0f0f0;font-size:13px;line-height:1.8}
 .contact{background:var(--dark);color:#f5f2ec;position:relative;overflow:hidden;padding-bottom:80px}
 .contact .kicker{color:#999}.contact h2{position:relative;z-index:2}.contact h2 em{color:var(--accent)}
 .contact-rings{position:absolute;width:800px;height:800px;border:1px solid rgba(255,255,255,.12);border-radius:50%;right:-200px;bottom:-430px}
@@ -336,8 +336,8 @@ footer{display:flex;justify-content:space-between;padding:22px 4vw;background:#1
 <section id="experience" class="experience section">
   <div class="experience-intro reveal"><p class="kicker">03 / ОПЫТ</p><h2>РОЛИ,<br><em>ГДЕ ВАЖЕН</em><br>РЕЗУЛЬТАТ.</h2></div>
   <div class="timeline">
-    <article class="role reveal"><div class="role-date">текущая практика</div><div class="company-logo"><img src="assets/logos/seeverse-black.png" alt="Логотип SeeVerse Studio"></div><div class="role-main"><h3>Project Manager & Level Designer</h3><p class="company">ТОО SEEVERSE STUDIO</p><p>Разработка игровых проектов (левел-дизайн в Unreal Engine и Game Maker, тестирование), презентация игр на выставках и форумах, оформление страницы игры для отправки на модерацию.</p></div><div class="role-id">00</div></article>
-    <article class="role reveal"><div class="role-date">текущая практика</div><div class="company-logo"><img src="assets/logos/gamedev-center-small-black.png" alt="Логотип GameDev Center"></div><div class="role-main"><h3>Заместитель руководителя</h3><p class="company">GAMEDEV CENTER / ASTANA HUB</p><p>Операционная логистика, соорганизация мероприятий, работа с участниками комьюнити и организационной командой.</p></div><div class="role-id">01</div></article>
+    <article class="role reveal"><div class="role-date">текущая практика</div><div class="company-logo"><img src="assets/logos/seeverse-white.png" alt="Логотип SeeVerse Studio"></div><div class="role-main"><h3>Project Manager & Level Designer</h3><p class="company">ТОО SEEVERSE STUDIO</p><p>Разработка игровых проектов (левел-дизайн в Unreal Engine и Game Maker, тестирование), презентация игр на выставках и форумах, оформление страницы игры для отправки на модерацию.</p></div><div class="role-id">00</div></article>
+    <article class="role reveal"><div class="role-date">текущая практика</div><div class="company-logo"><img src="assets/logos/gamedev-center-small-white.png" alt="Логотип GameDev Center"></div><div class="role-main"><h3>Заместитель руководителя</h3><p class="company">GAMEDEV CENTER / ASTANA HUB</p><p>Операционная логистика, соорганизация мероприятий, работа с участниками комьюнити и организационной командой.</p></div><div class="role-id">01</div></article>
     <article class="role reveal"><div class="role-date">образовательная практика</div><div class="company-logo">QUANTUM<br>TECH &amp;<br>WORLD SKILLS</div><div class="role-main"><h3>Ассистент образовательных программ</h3><p class="company">QUANTUM TECH SCHOOL &amp; WORLDSKILLS</p><p>Ассистирование на профильном курсе по геймдеву (Quantum TECH) и на тренировочных интенсивах по подготовке региональных делегатов (WorldSkills). Помощь в проведении занятий и коммуникации со студентами.</p></div><div class="role-id">02</div></article>
   </div>
 </section>
