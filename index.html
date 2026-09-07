@@ -167,6 +167,22 @@ h2 em{font-style:normal;color:#777}
 .credential-card b{font:500 9px var(--mono);letter-spacing:.06em;margin-top:20px}
 .animo-card{background:#1b1b1b;color:white;padding:25px}
 .animo-card p,.animo-card .year{color:#aaa}
+.document-gallery{margin-top:45px;display:grid;grid-template-columns:repeat(3,1fr);border-top:1px solid var(--line)}
+.document-link{padding:24px;border-right:1px solid var(--line);display:block;transition:background .25s}
+.document-link:first-child{padding-left:0}.document-link:last-child{border-right:0}
+.document-link:hover{background:rgba(255,255,255,.32)}
+.document-link img{width:100%;height:220px;object-fit:cover;object-position:center;border:1px solid var(--line);filter:saturate(.88)}
+.document-link span{display:block;margin-top:15px;font:500 9px var(--mono);letter-spacing:.08em;color:var(--muted)}
+.document-link h3{margin:8px 0 0;font:500 15px/1.3 var(--display);letter-spacing:-.045em}
+.press-heading{margin-bottom:45px}
+.press-grid{display:grid;grid-template-columns:repeat(3,1fr);border-top:1px solid var(--line)}
+.press-card{min-height:260px;padding:25px;border-right:1px solid var(--line);display:flex;flex-direction:column;justify-content:space-between;transition:background .25s,color .25s}
+.press-card:first-child{padding-left:0}.press-card:last-child{border-right:0}
+.press-card:hover{background:var(--dark);color:#fff}
+.press-card span,.press-card b{font:500 9px var(--mono);letter-spacing:.08em;color:var(--muted)}
+.press-card h3{font:500 20px/1.15 var(--display);letter-spacing:-.055em;margin:25px 0 10px}
+.press-card p{font-size:13px;line-height:1.55;color:#555;margin:0}
+.press-card:hover p,.press-card:hover span{color:#bbb8b2}.press-card:hover b{color:var(--accent)}
 .education{background:#dedbd3}
 .education-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:0;border-top:1px solid var(--line)}
 .education-grid>div{padding:27px 25px;border-bottom:1px solid var(--line)}
@@ -191,7 +207,7 @@ footer{display:flex;justify-content:space-between;padding:22px 4vw;background:#1
   nav{display:none}.topbar{height:65px}.hero{grid-template-columns:1fr;padding-top:105px}.hero-object{justify-self:center;width:min(86vw,480px);order:-1;margin-top:15px}.hero h1{font-size:clamp(52px,14vw,90px)}.hero h1 span{padding-left:13vw}.hero-aside{display:none}
   .profile,.impact,.experience,.skills{grid-template-columns:1fr}.section-no{display:none}.profile{gap:25px}
   .project{grid-template-columns:45px 170px 1fr}.project .open{display:none}.project-visual{height:135px}
-  .impact{gap:50px}.skill-columns{grid-template-columns:1fr}.skill-columns>div{border-right:0;border-bottom:1px solid var(--line);padding-left:0}.credentials-grid{grid-template-columns:1fr}.credential-card,.credential-card:first-child{border-right:0;border-bottom:1px solid var(--line);padding-left:0}.role{grid-template-columns:105px 1fr 25px}.company-logo{display:none}
+  .impact{gap:50px}.skill-columns{grid-template-columns:1fr}.skill-columns>div{border-right:0;border-bottom:1px solid var(--line);padding-left:0}.credentials-grid,.press-grid,.document-gallery{grid-template-columns:1fr}.credential-card,.credential-card:first-child,.press-card,.press-card:first-child,.document-link,.document-link:first-child{border-right:0;border-bottom:1px solid var(--line);padding-left:0}.role{grid-template-columns:105px 1fr 25px}.company-logo{display:none}
 }
 @media(max-width:600px){
   .topbar{padding:0 20px}.email-link{font-size:9px;padding:9px 10px}.section,.hero{padding-left:20px;padding-right:20px}.hero:before,.hero:after{left:20px;right:20px}.h-two{right:20px}.hero-object{width:100%}.hero h1{font-size:52px}.lede{font-size:15px}.project-head{display:block}.project-head>p{margin-top:22px}
@@ -212,6 +228,7 @@ footer{display:flex;justify-content:space-between;padding:22px 4vw;background:#1
     <a href="#profile">профиль</a>
     <a href="#projects">проекты</a>
     <a href="#experience">опыт</a>
+    <a href="#press">медиа</a>
     <a href="#credentials">достижения</a>
   </nav>
   <a class="email-link" href="mailto:matweyses2007@gmail.com">написать ↗</a>
@@ -250,7 +267,7 @@ footer{display:flex;justify-content:space-between;padding:22px 4vw;background:#1
   </div>
   <dl class="stats reveal">
     <div><dt>INDIE DEV</dt><dd>Level-дизайн (Unreal Engine, Game Maker) · геймдизайн · проджект-менеджмент.</dd></div>
-    <div><dt>EVENTS</dt><dd>Соорганизация геймджемов · техническое сопровождение демо-зон · презентация и питчинг проектов на Comic Con Astana и Digital Bridge.</dd></div>
+    <div><dt>EVENTS</dt><dd>Соорганизация геймджемов · техническое сопровождение демо-зон · соорганизация и презентация проектов в GameDev-зоне Comic Con Astana три года подряд: 2024–2026.</dd></div>
     <div><dt>EDUCATION</dt><dd>Ассистирование на курсах по геймдеву · организация лекций · работа с регистрациями и подготовка учебных материалов.</dd></div>
   </dl>
 </section>
@@ -288,8 +305,8 @@ footer{display:flex;justify-content:space-between;padding:22px 4vw;background:#1
     <h2>ИНДУСТРИЯ —<br><em>ЭТО СРЕДА,</em><br>КОТОРУЮ НУЖНО<br>СОБИРАТЬ.</h2>
   </div>
   <div class="impact-list">
-    <article class="impact-card reveal"><span>01 / COMMUNITY</span><h3>Геймджемы и выставки</h3><p>Соорганизатор трёх геймджемов, включая Global Game Jam и Spark Game Jam, с выступлением в качестве представителя оргкоманды GDC на трансляциях. Соорганизатор GameDev-зоны на Comic Con Astana 2026.</p></article>
-    <article class="impact-card reveal"><span>02 / EXHIBITIONS & SHOWCASES</span><h3>Презентация проектов и траблшутинг</h3><p>Работа в демо-зоне на Digital Bridge 2025: решение технических и организационных проблем, презентация собственного инди-проекта и студии. Презентация проектов студии в GameDev-зоне Comic Con Astana 2026.</p></article>
+    <article class="impact-card reveal"><span>01 / COMMUNITY</span><h3>Геймджемы и выставки</h3><p>Соорганизатор трёх геймджемов, включая Global Game Jam и Spark Game Jam, с выступлением в качестве представителя оргкоманды GDC на трансляциях. Соорганизатор GameDev-зоны и участник презентации проектов на Comic Con Astana три года подряд — с 2024 по 2026.</p></article>
+    <article class="impact-card reveal"><span>02 / EXHIBITIONS & SHOWCASES</span><h3>Презентация проектов и траблшутинг</h3><p>Работа в демо-зоне на Digital Bridge 2025: решение технических и организационных проблем, презентация собственного инди-проекта и студии. Презентация проектов студии в GameDev-зоне Comic Con Astana в 2024–2026 годах.</p></article>
     <article class="impact-card reveal"><span>03 / EDUCATION</span><h3>Ассистирование и сопровождение</h3><p>Ассистент профильных курсов по геймдеву (Quantum TECH School) и курсов подготовки к WorldSkills. Соорганизация бесплатных публичных лекций на платформе Open University (администрирование процессов и работа с аудиторией). Участие в оформлении планов уроков по готовым образовательным методикам.</p></article>
   </div>
 </section>
@@ -319,19 +336,38 @@ footer{display:flex;justify-content:space-between;padding:22px 4vw;background:#1
     <article class="credential-card reveal"><span class="year">2026 · АРХИТЕКТУРНЫЙ ФОРУМ</span><div><h3>Благодарственное письмо / Сертификат</h3><p>За активное участие в оформлении и проведении профильного форума, а также успешную презентацию проекта жилого комплекса от лица колледжа.</p></div><b>RECOGNITION / 2026</b></article>
     <article class="credential-card animo-card reveal"><span class="year">ANIMO NEXT GEN</span><div><h3>Студенческая премия — 3 сертификата</h3><p>Топ-3 (2-е место) по направлению «Программирование и разработка игр в Unreal Engine». Топ-10 по направлению «3D-моделирование и анимация». Сертификат за успешную защиту проекта.</p></div><b>AWARDS / ANIMO</b></article>
   </div>
+  <div class="document-gallery reveal" aria-label="Сканы документов о достижениях">
+    <a class="document-link" href="assets/certificates/animo-nextgen-2023-top-10.jpg" target="_blank" rel="noreferrer"><img src="assets/certificates/animo-nextgen-2023-top-10.jpg" alt="Сертификат ANIMO NextGen Fest 2023 — Топ-10"><span>ANIMO NEXTGEN FEST · 2023</span><h3>Топ-10</h3></a>
+    <a class="document-link" href="assets/certificates/animo-nextgen-2024-top-3.jpg" target="_blank" rel="noreferrer"><img src="assets/certificates/animo-nextgen-2024-top-3.jpg" alt="Сертификат ANIMO NextGen Fest 2024 — Топ-3"><span>ANIMO NEXTGEN FEST · 2024</span><h3>Топ-3 — направление Engine</h3></a>
+    <a class="document-link" href="assets/certificates/turan-college-forum-appreciation.jpg" target="_blank" rel="noreferrer"><img src="assets/certificates/turan-college-forum-appreciation.jpg" alt="Благодарственное письмо колледжа Туран"><span>КОЛЛЕДЖ «ТУРАН»</span><h3>Благодарственное письмо</h3></a>
+  </div>
+</section>
+
+<section id="press" class="press section">
+  <div class="press-heading reveal"><p class="kicker">06 / MEDIA</p><h2>МЕДИА<br><em>И ПУБЛИКАЦИИ.</em></h2></div>
+  <div class="press-grid">
+    <a class="press-card reveal" href="https://www.7152.kz/amp/news/4122864/ot-gejmerov-v-razrabotciki-molodez-sko-ucastvuet-v-intensivnom-prakticeskom-kurse-gamedev-bootcamp" target="_blank" rel="noreferrer"><span>7152.KZ · 2026</span><div><h3>От геймеров в разработчики</h3><p>Материал об интенсивном практическом курсе GameDev Bootcamp для молодёжи Северо-Казахстанской области.</p></div><b>ЧИТАТЬ ↗</b></a>
+    <a class="press-card reveal" href="https://mtrk.kz/ru/2026/06/25/poprobuy-sozdat-svoyu-igru/" target="_blank" rel="noreferrer"><span>МТРК · 25.06.2026</span><div><h3>«Попробуй создать свою игру»</h3><p>Телесюжет об образовательном интенсиве GameDev Bootcamp в Петропавловске.</p></div><b>СМОТРЕТЬ ↗</b></a>
+    <a class="press-card reveal" href="https://qz-media.kz/novosti/v-petropavlovske-prohodit-masshtabnyj-bootcamp-po-razrabotke-kompyuternyh-igr/" target="_blank" rel="noreferrer"><span>QZ-MEDIA · 25.06.2026</span><div><h3>Масштабный Bootcamp по разработке игр</h3><p>Публикация о GameDev Bootcamp с упоминанием Матвея Сеселкина в числе спикеров и наставников.</p></div><b>ЧИТАТЬ ↗</b></a>
+  </div>
 </section>
 
 <section class="education section">
-  <p class="kicker reveal">06 / EDUCATION</p>
+  <p class="kicker reveal">07 / EDUCATION</p>
   <div class="education-grid reveal">
     <div class="course-list"><span>ANIMO</span><h3>Профильные образовательные программы</h3><ul><li>Цифровой рисунок и 2D-анимация</li><li>Программирование и разработка игр в Unreal Engine</li><li>3D-моделирование и анимация</li></ul></div>
     <div><span>КОЛЛЕДЖ · CURRENT</span><h3>Архитектура</h3><p>4-й курс, обучение продолжается. Опыт руководства командой проектировщиков и разработки архитектурных проектов.</p></div>
+  </div>
+  <div class="document-gallery reveal" aria-label="Сканы образовательных сертификатов">
+    <a class="document-link" href="assets/certificates/animo-digital-art-2d-animation.jpg" target="_blank" rel="noreferrer"><img src="assets/certificates/animo-digital-art-2d-animation.jpg" alt="Сертификат ANIMO по цифровому рисунку и 2D-анимации"><span>ANIMO</span><h3>Цифровой рисунок и 2D-анимация</h3></a>
+    <a class="document-link" href="assets/certificates/animo-3d-modeling-animation.jpg" target="_blank" rel="noreferrer"><img src="assets/certificates/animo-3d-modeling-animation.jpg" alt="Сертификат ANIMO по 3D-моделированию и анимации"><span>ANIMO</span><h3>3D-моделирование и анимация</h3></a>
+    <a class="document-link" href="assets/certificates/animo-programming-gamedev-unreal.jpg" target="_blank" rel="noreferrer"><img src="assets/certificates/animo-programming-gamedev-unreal.jpg" alt="Сертификат ANIMO по программированию и разработке игр в Unreal Engine"><span>ANIMO</span><h3>Программирование и GameDev в Unreal Engine</h3></a>
   </div>
 </section>
 
 <section class="contact section">
   <div class="contact-rings"></div>
-  <p class="kicker reveal">07 / CONTACT</p>
+  <p class="kicker reveal">08 / CONTACT</p>
   <h2 class="reveal">ОБСУДИМ<br><em>СЛЕДУЮЩИЙ</em><br>ПРОЕКТ?</h2>
   <div class="contact-actions reveal">
     <a href="mailto:matweyses2007@gmail.com">matweyses2007@gmail.com <b>↗</b></a>
