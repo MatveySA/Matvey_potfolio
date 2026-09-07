@@ -127,6 +127,10 @@ h2 em{font-style:normal;color:#777}
 .project-visual{height:175px;background:#1a1a1a;display:flex;align-items:center;justify-content:center;position:relative;overflow:hidden}
 .project-visual:before{content:"";position:absolute;width:180%;height:1px;background:rgba(255,255,255,.1);transform:rotate(-35deg)}
 .project-visual span{position:relative;color:white;font:500 23px var(--display);text-align:center;letter-spacing:-.08em}
+.project-visual.logo-visual:before{display:none}
+.project-visual.logo-visual{padding:20px;background:var(--paper)}
+.project-visual.logo-visual img{width:100%;height:100%;object-fit:contain;object-position:center}
+.project-visual.logo-gdc{background:#1a1a1a}.project-visual.logo-turan{background:#e6e1d7}
 .arch-v{background:#b8afa1}
 .arch-v:before{background:rgba(0,0,0,.1);transform:rotate(35deg)}
 .arch-v span{color:#171717;font-size:17px}
@@ -146,6 +150,7 @@ h2 em{font-style:normal;color:#777}
 .role{display:grid;grid-template-columns:130px 110px 1fr 35px;gap:22px;padding:27px 0;border-bottom:1px solid var(--line);align-items:start}
 .role-date,.company-logo,.role-id{font:500 10px var(--mono);color:var(--muted)}
 .company-logo{color:#171717;font-weight:500;line-height:1.1}
+.company-logo img{display:block;width:76px;height:55px;object-fit:contain;object-position:center}
 .role-main h3{margin:0;font-size:19px}.role-main .company{font-size:11px;font-family:var(--mono);color:#777;margin:7px 0 11px}
 .role-main>p:last-child{margin:0;font-size:13px;line-height:1.55;color:#555}
 .role-id{text-align:right}
@@ -157,25 +162,30 @@ h2 em{font-style:normal;color:#777}
 .skill-columns span{font:500 10px var(--mono);color:var(--muted)}
 .skill-columns h3{font:500 18px var(--display);letter-spacing:-.05em;margin:35px 0 14px}
 .skill-columns p{font-size:13px;line-height:1.65;color:#555}
+.credentials{background:#1b1b1b;color:#f5f2ec}
+.credentials .kicker{color:#aaa}.credentials h2 em{color:var(--accent)}
 .credentials-heading{margin-bottom:45px}
-.credentials-grid{display:grid;grid-template-columns:repeat(2,1fr);border-top:1px solid var(--line)}
-.credential-card{padding:25px;border-right:1px solid var(--line);border-bottom:1px solid var(--line);min-height:280px;display:flex;flex-direction:column;justify-content:space-between}
-.credential-card:nth-child(odd){padding-left:0}.credential-card:nth-child(even){border-right:0}
-.credential-card .year{font:500 10px var(--mono);color:var(--muted)}
-.credential-card h3{font:500 20px/1.15 var(--display);letter-spacing:-.055em;margin:25px 0 10px}
-.credential-card p{font-size:13px;line-height:1.55;color:#555}
-.credential-card b{font:500 9px var(--mono);letter-spacing:.06em;margin-top:20px}
-.animo-card{background:#1b1b1b;color:white;padding:25px}
-.animo-card p,.animo-card .year{color:#aaa}
-.credential-proof{display:grid;grid-template-columns:1fr;gap:10px;margin-top:24px}
+.credentials-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:10px}
+.credential-card{padding:0 15px 15px;border:1px solid rgba(255,255,255,.18);min-height:300px;display:flex;flex-direction:column;background:rgba(0,0,0,.08);transition:border-color .25s,background .25s}
+.credential-card:hover{border-color:rgba(255,255,255,.55);background:rgba(255,255,255,.035)}
+.credential-card .year{font:500 9px var(--mono);letter-spacing:.06em;color:var(--accent);margin-top:15px}
+.credential-card h3{font:500 16px/1.18 var(--display);letter-spacing:-.055em;margin:14px 0 10px}
+.credential-card p{font-size:11px;line-height:1.55;color:#b8b8b2;margin:0}
+.credential-card b{font:500 8px var(--mono);letter-spacing:.06em;margin-top:auto;padding-top:18px;color:#f5f2ec}
+.animo-card{background:rgba(0,0,0,.08);color:#f5f2ec;padding:0 15px 15px}
+.animo-card p,.animo-card .year{color:#b8b8b2}
+.credential-proof{order:-1;display:grid;grid-template-columns:1fr;gap:10px;height:130px;margin:0 -15px;padding:0;background:#111;border:0;overflow:hidden}
 .credential-proof.multiple{grid-template-columns:repeat(2,1fr)}
-.credential-proof a{display:block}.credential-proof img{width:100%;height:155px;object-fit:cover;object-position:center;border:1px solid var(--line);filter:saturate(.9);transition:transform .25s}
-.credential-proof a:hover img{transform:scale(1.015)}
+.credential-proof a{display:flex;align-items:center;justify-content:center;overflow:hidden;background:#111}
+.credential-proof img{width:100%;height:100%;object-fit:cover;object-position:center;filter:grayscale(1) contrast(1.05);transition:filter .35s ease,transform .25s}
+.credential-proof a:hover img{filter:grayscale(0) saturate(1);transform:scale(1.015)}
+.animo-card .credential-proof{background:#111;border:0}.animo-card .credential-proof a{background:#111}
 .document-gallery{margin-top:45px;display:grid;grid-template-columns:repeat(3,1fr);border-top:1px solid var(--line)}
 .document-link{padding:24px;border-right:1px solid var(--line);display:block;transition:background .25s}
 .document-link:first-child{padding-left:0}.document-link:last-child{border-right:0}
 .document-link:hover{background:rgba(255,255,255,.32)}
-.document-link img{width:100%;height:220px;object-fit:cover;object-position:center;border:1px solid var(--line);filter:saturate(.88)}
+.document-link img{width:100%;height:220px;object-fit:contain;object-position:center;padding:12px;background:#dedbd3;border:1px solid var(--line);filter:grayscale(1) contrast(1.05);transition:filter .35s ease}
+.document-link:hover img{filter:grayscale(0) saturate(1)}
 .document-link span{display:block;margin-top:15px;font:500 9px var(--mono);letter-spacing:.08em;color:var(--muted)}
 .document-link h3{margin:8px 0 0;font:500 15px/1.3 var(--display);letter-spacing:-.045em}
 .press-heading{margin-bottom:45px}
@@ -211,7 +221,7 @@ footer{display:flex;justify-content:space-between;padding:22px 4vw;background:#1
   nav{display:none}.topbar{height:65px}.hero{grid-template-columns:1fr;padding-top:105px}.hero-object{justify-self:center;width:min(86vw,480px);order:-1;margin-top:15px}.hero h1{font-size:clamp(52px,14vw,90px)}.hero h1 span{padding-left:13vw}.hero-aside{display:none}
   .profile,.impact,.experience,.skills{grid-template-columns:1fr}.section-no{display:none}.profile{gap:25px}
   .project{grid-template-columns:45px 170px 1fr}.project .open{display:none}.project-visual{height:135px}
-  .impact{gap:50px}.skill-columns{grid-template-columns:1fr}.skill-columns>div{border-right:0;border-bottom:1px solid var(--line);padding-left:0}.credentials-grid,.press-grid,.document-gallery{grid-template-columns:1fr}.credential-card,.credential-card:first-child,.press-card,.press-card:first-child,.document-link,.document-link:first-child{border-right:0;border-bottom:1px solid var(--line);padding-left:0}.role{grid-template-columns:105px 1fr 25px}.company-logo{display:none}
+  .impact{gap:50px}.skill-columns{grid-template-columns:1fr}.skill-columns>div{border-right:0;border-bottom:1px solid var(--line);padding-left:0}.credentials-grid,.press-grid,.document-gallery{grid-template-columns:1fr}.credential-card{padding:0 15px 15px;border:1px solid rgba(255,255,255,.18)}.press-card,.press-card:first-child,.document-link,.document-link:first-child{border-right:0;border-bottom:1px solid var(--line);padding-left:0}.role{grid-template-columns:105px 1fr 25px}.company-logo{display:none}
 }
 @media(max-width:600px){
   .topbar{padding:0 20px}.email-link{font-size:9px;padding:9px 10px}.section,.hero{padding-left:20px;padding-right:20px}.hero:before,.hero:after{left:20px;right:20px}.h-two{right:20px}.hero-object{width:100%}.hero h1{font-size:52px}.lede{font-size:15px}.project-head{display:block}.project-head>p{margin-top:22px}
@@ -284,19 +294,19 @@ footer{display:flex;justify-content:space-between;padding:22px 4vw;background:#1
   <div class="project-list">
     <div class="project reveal">
       <div class="project-index">01</div>
-      <div class="project-visual"><span>BY YOUR<br>NAME</span></div>
+      <div class="project-visual logo-visual logo-byn"><img src="assets/logos/by-your-name-black.png" alt="Логотип BY YOUR NAME"></div>
       <div class="project-copy"><p class="tag">SEEVERSE STUDIO / GAME PROJECT</p><h3>BY YOUR NAME</h3><p>Игровой проект студии SeeVerse Studio. Ссылка ведёт на актуальную страницу продукта.</p></div>
       <span class="open">GAME<br>PROJECT</span>
     </div>
     <div class="project reveal">
       <div class="project-index">02</div>
-      <div class="project-visual"><span>GAMEDEV<br>CENTER</span></div>
+      <div class="project-visual logo-visual logo-gdc"><img src="assets/logos/gamedev-center-white.png" alt="Логотип GameDev Center"></div>
       <div class="project-copy"><p class="tag">COMMUNITY / ASTANA HUB</p><h3>GAMEDEV CENTER</h3><p>Операционное сопровождение хаба, координация рабочих процессов и соорганизация мероприятий. Активное участие в развитии профессионального сообщества.</p></div>
       <span class="open">COMMUNITY<br>HUB</span>
     </div>
     <div class="project reveal">
       <div class="project-index">03</div>
-      <div class="project-visual arch-v"><span>АРХИТЕКТУРА<br>/ ЖК</span></div>
+      <div class="project-visual logo-visual logo-turan"><img src="assets/logos/turan-college.png" alt="Логотип колледжа Туран"></div>
       <div class="project-copy"><p class="tag">ARCHITECTURE / COLLEGE PROJECT</p><h3>ПРОЕКТИРОВАНИЕ ЖИЛОГО КОМПЛЕКСА</h3><p>Руководство студенческой командой по разработке проекта жилого комплекса с последующей успешной презентацией проекта на профильном архитектурном форуме.</p></div>
       <span class="open">ARCH<br>PROJECT</span>
     </div>
@@ -318,8 +328,8 @@ footer{display:flex;justify-content:space-between;padding:22px 4vw;background:#1
 <section id="experience" class="experience section">
   <div class="experience-intro reveal"><p class="kicker">03 / ОПЫТ</p><h2>РОЛИ,<br><em>ГДЕ ВАЖЕН</em><br>РЕЗУЛЬТАТ.</h2></div>
   <div class="timeline">
-    <article class="role reveal"><div class="role-date">текущая практика</div><div class="company-logo">SEEVERSE<br>STUDIO</div><div class="role-main"><h3>Project Manager & Level Designer</h3><p class="company">ТОО SEEVERSE STUDIO</p><p>Разработка игровых проектов (левел-дизайн в Unreal Engine и Game Maker, тестирование), презентация игр на выставках и форумах, оформление страницы игры для отправки на модерацию.</p></div><div class="role-id">00</div></article>
-    <article class="role reveal"><div class="role-date">текущая практика</div><div class="company-logo">GAMEDEV<br>CENTER</div><div class="role-main"><h3>Заместитель руководителя</h3><p class="company">GAMEDEV CENTER / ASTANA HUB</p><p>Операционная логистика, соорганизация мероприятий, работа с участниками комьюнити и организационной командой.</p></div><div class="role-id">01</div></article>
+    <article class="role reveal"><div class="role-date">текущая практика</div><div class="company-logo"><img src="assets/logos/seeverse-black.png" alt="Логотип SeeVerse Studio"></div><div class="role-main"><h3>Project Manager & Level Designer</h3><p class="company">ТОО SEEVERSE STUDIO</p><p>Разработка игровых проектов (левел-дизайн в Unreal Engine и Game Maker, тестирование), презентация игр на выставках и форумах, оформление страницы игры для отправки на модерацию.</p></div><div class="role-id">00</div></article>
+    <article class="role reveal"><div class="role-date">текущая практика</div><div class="company-logo"><img src="assets/logos/gamedev-center-small-black.png" alt="Логотип GameDev Center"></div><div class="role-main"><h3>Заместитель руководителя</h3><p class="company">GAMEDEV CENTER / ASTANA HUB</p><p>Операционная логистика, соорганизация мероприятий, работа с участниками комьюнити и организационной командой.</p></div><div class="role-id">01</div></article>
     <article class="role reveal"><div class="role-date">образовательная практика</div><div class="company-logo">QUANTUM<br>TECH &amp;<br>WORLD SKILLS</div><div class="role-main"><h3>Ассистент образовательных программ</h3><p class="company">QUANTUM TECH SCHOOL &amp; WORLDSKILLS</p><p>Ассистирование на профильном курсе по геймдеву (Quantum TECH) и на тренировочных интенсивах по подготовке региональных делегатов (WorldSkills). Помощь в проведении занятий и коммуникации со студентами.</p></div><div class="role-id">02</div></article>
   </div>
 </section>
