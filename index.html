@@ -124,6 +124,7 @@ h2 em{font-style:normal;color:var(--accent)}
   transition:.3s;padding:24px 0;
 }
 .project:hover{padding-left:14px;background:rgba(255,255,255,.18)}
+.project-link{cursor:pointer}
 .project-index,.open{font:500 10px var(--mono);color:var(--muted)}
 .project-visual{height:175px;background:#1a1a1a;display:flex;align-items:center;justify-content:center;position:relative;overflow:hidden}
 .project-visual:before{content:"";position:absolute;width:180%;height:1px;background:rgba(255,255,255,.1);transform:rotate(-35deg)}
@@ -131,6 +132,7 @@ h2 em{font-style:normal;color:var(--accent)}
 .project-visual.logo-visual:before{display:none}
 .project-visual.logo-visual{padding:20px;background:var(--paper)}
 .project-visual.logo-visual img{width:100%;height:100%;object-fit:contain;object-position:center}
+.project-visual.logo-byn{background:#111}.project-visual.logo-byn img{filter:invert(1)}
 .project-visual.logo-gdc{background:#1a1a1a}.project-visual.logo-turan{background:#e6e1d7}
 .arch-v{background:#b8afa1}
 .arch-v:before{background:rgba(0,0,0,.1);transform:rotate(35deg)}
@@ -300,12 +302,12 @@ footer{display:flex;justify-content:space-between;padding:22px 4vw;background:#1
     <p>Игровые, образовательные и архитектурные проекты, в которых моя роль связана с управлением, разработкой и презентацией результата.</p>
   </div>
   <div class="project-list">
-    <div class="project reveal">
+    <a class="project reveal project-link" href="https://by-your-name.seeverse.workers.dev" target="_blank" rel="noreferrer" aria-label="Открыть сайт проекта BY YOUR NAME">
       <div class="project-index">01</div>
       <div class="project-visual logo-visual logo-byn"><img src="assets/logos/by-your-name-black.png" alt="Логотип BY YOUR NAME"></div>
       <div class="project-copy"><p class="tag">SEEVERSE STUDIO / GAME PROJECT</p><h3>BY YOUR NAME</h3><p>Игровой проект студии SeeVerse Studio. Ссылка ведёт на актуальную страницу продукта.</p></div>
       <span class="open">GAME<br>PROJECT</span>
-    </div>
+    </a>
     <div class="project reveal">
       <div class="project-index">02</div>
       <div class="project-visual logo-visual logo-gdc"><img src="assets/logos/gamedev-center-white.png" alt="Логотип GameDev Center"></div>
