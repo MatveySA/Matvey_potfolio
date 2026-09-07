@@ -158,15 +158,19 @@ h2 em{font-style:normal;color:#777}
 .skill-columns h3{font:500 18px var(--display);letter-spacing:-.05em;margin:35px 0 14px}
 .skill-columns p{font-size:13px;line-height:1.65;color:#555}
 .credentials-heading{margin-bottom:45px}
-.credentials-grid{display:grid;grid-template-columns:repeat(3,1fr);border-top:1px solid var(--line)}
-.credential-card{padding:25px;border-right:1px solid var(--line);min-height:280px;display:flex;flex-direction:column;justify-content:space-between}
-.credential-card:first-child{padding-left:0}.credential-card:last-child{border-right:0}
+.credentials-grid{display:grid;grid-template-columns:repeat(2,1fr);border-top:1px solid var(--line)}
+.credential-card{padding:25px;border-right:1px solid var(--line);border-bottom:1px solid var(--line);min-height:280px;display:flex;flex-direction:column;justify-content:space-between}
+.credential-card:nth-child(odd){padding-left:0}.credential-card:nth-child(even){border-right:0}
 .credential-card .year{font:500 10px var(--mono);color:var(--muted)}
 .credential-card h3{font:500 20px/1.15 var(--display);letter-spacing:-.055em;margin:25px 0 10px}
 .credential-card p{font-size:13px;line-height:1.55;color:#555}
 .credential-card b{font:500 9px var(--mono);letter-spacing:.06em;margin-top:20px}
 .animo-card{background:#1b1b1b;color:white;padding:25px}
 .animo-card p,.animo-card .year{color:#aaa}
+.credential-proof{display:grid;grid-template-columns:1fr;gap:10px;margin-top:24px}
+.credential-proof.multiple{grid-template-columns:repeat(2,1fr)}
+.credential-proof a{display:block}.credential-proof img{width:100%;height:155px;object-fit:cover;object-position:center;border:1px solid var(--line);filter:saturate(.9);transition:transform .25s}
+.credential-proof a:hover img{transform:scale(1.015)}
 .document-gallery{margin-top:45px;display:grid;grid-template-columns:repeat(3,1fr);border-top:1px solid var(--line)}
 .document-link{padding:24px;border-right:1px solid var(--line);display:block;transition:background .25s}
 .document-link:first-child{padding-left:0}.document-link:last-child{border-right:0}
@@ -332,14 +336,10 @@ footer{display:flex;justify-content:space-between;padding:22px 4vw;background:#1
 <section id="credentials" class="credentials section">
   <div class="credentials-heading reveal"><p class="kicker">05 / CREDENTIALS</p><h2>ДОКУМЕНТЫ<br><em>И ПРИЗНАНИЕ.</em></h2></div>
   <div class="credentials-grid">
-    <article class="credential-card reveal"><span class="year">2025 · DIGITAL BRIDGE</span><div><h3>Благодарственное письмо</h3><p>За волонтёрство, техническую поддержку в демо-зоне и презентацию проекта на международном форуме Digital Bridge.</p></div><b>RECOGNITION / 2025</b></article>
-    <article class="credential-card reveal"><span class="year">2026 · АРХИТЕКТУРНЫЙ ФОРУМ</span><div><h3>Благодарственное письмо / Сертификат</h3><p>За активное участие в оформлении и проведении профильного форума, а также успешную презентацию проекта жилого комплекса от лица колледжа.</p></div><b>RECOGNITION / 2026</b></article>
-    <article class="credential-card animo-card reveal"><span class="year">ANIMO NEXT GEN</span><div><h3>Студенческая премия — 3 сертификата</h3><p>Топ-3 (2-е место) по направлению «Программирование и разработка игр в Unreal Engine». Топ-10 по направлению «3D-моделирование и анимация». Сертификат за успешную защиту проекта.</p></div><b>AWARDS / ANIMO</b></article>
-  </div>
-  <div class="document-gallery reveal" aria-label="Сканы документов о достижениях">
-    <a class="document-link" href="assets/certificates/animo-nextgen-2023-top-10.jpg" target="_blank" rel="noreferrer"><img src="assets/certificates/animo-nextgen-2023-top-10.jpg" alt="Сертификат ANIMO NextGen Fest 2023 — Топ-10"><span>ANIMO NEXTGEN FEST · 2023</span><h3>Топ-10</h3></a>
-    <a class="document-link" href="assets/certificates/animo-nextgen-2024-top-3.jpg" target="_blank" rel="noreferrer"><img src="assets/certificates/animo-nextgen-2024-top-3.jpg" alt="Сертификат ANIMO NextGen Fest 2024 — Топ-3"><span>ANIMO NEXTGEN FEST · 2024</span><h3>Топ-3 — направление Engine</h3></a>
-    <a class="document-link" href="assets/certificates/turan-college-forum-appreciation.jpg" target="_blank" rel="noreferrer"><img src="assets/certificates/turan-college-forum-appreciation.jpg" alt="Благодарственное письмо колледжа Туран"><span>КОЛЛЕДЖ «ТУРАН»</span><h3>Благодарственное письмо</h3></a>
+    <article class="credential-card reveal"><span class="year">2025 · DIGITAL BRIDGE</span><div><h3>Благодарственное письмо</h3><p>За волонтёрство, техническую поддержку в демо-зоне и презентацию проекта на международном форуме Digital Bridge.</p></div><div class="credential-proof"><a href="assets/certificates/digital-bridge-2025-appreciation-letter.png" target="_blank" rel="noreferrer"><img src="assets/certificates/digital-bridge-2025-appreciation-letter.png" alt="Благодарственное письмо Digital Bridge 2025"></a></div><b>RECOGNITION / 2025</b></article>
+    <article class="credential-card reveal"><span class="year">2026 · АРХИТЕКТУРНЫЙ ФОРУМ</span><div><h3>Благодарственное письмо / Сертификат</h3><p>За активное участие в оформлении и проведении профильного форума, а также успешную презентацию проекта жилого комплекса от лица колледжа.</p></div><div class="credential-proof"><a href="assets/certificates/turan-college-forum-appreciation.jpg" target="_blank" rel="noreferrer"><img src="assets/certificates/turan-college-forum-appreciation.jpg" alt="Благодарственное письмо колледжа Туран"></a></div><b>RECOGNITION / 2026</b></article>
+    <article class="credential-card animo-card reveal"><span class="year">ANIMO NEXT GEN</span><div><h3>Студенческая премия — 3 сертификата</h3><p>Топ-3 (2-е место) по направлению «Программирование и разработка игр в Unreal Engine». Топ-10 по направлению «3D-моделирование и анимация». Сертификат за успешную защиту проекта.</p></div><div class="credential-proof multiple"><a href="assets/certificates/animo-nextgen-2024-top-3.jpg" target="_blank" rel="noreferrer"><img src="assets/certificates/animo-nextgen-2024-top-3.jpg" alt="Сертификат ANIMO NextGen Fest 2024 — Топ-3"></a><a href="assets/certificates/animo-nextgen-2023-top-10.jpg" target="_blank" rel="noreferrer"><img src="assets/certificates/animo-nextgen-2023-top-10.jpg" alt="Сертификат ANIMO NextGen Fest 2023 — Топ-10"></a></div><b>AWARDS / ANIMO</b></article>
+    <article class="credential-card reveal"><span class="year">2026 · TRAILS</span><div><h3>Стажировочная программа TRAILS</h3><p>Прохождение практики в рамках бесплатной образовательной программы Trails. Итоговым результатом стажировки стала разработка мобильного проекта Robot Repair.</p></div><div class="credential-proof"><a href="assets/certificates/trails-robot-repair-internship-certificate.png" target="_blank" rel="noreferrer"><img src="assets/certificates/trails-robot-repair-internship-certificate.png" alt="Сертификат о прохождении стажировочной программы TRAILS и разработке Robot Repair"></a></div><b>INTERNSHIP / GAME DEVELOPMENT</b></article>
   </div>
 </section>
 
@@ -355,7 +355,7 @@ footer{display:flex;justify-content:space-between;padding:22px 4vw;background:#1
 <section class="education section">
   <p class="kicker reveal">07 / EDUCATION</p>
   <div class="education-grid reveal">
-    <div class="course-list"><span>ANIMO</span><h3>Профильные образовательные программы</h3><ul><li>Цифровой рисунок и 2D-анимация</li><li>Программирование и разработка игр в Unreal Engine</li><li>3D-моделирование и анимация</li></ul></div>
+    <div class="course-list"><span>ANIMO</span><h3>Профильные образовательные программы</h3><p>Сертификаты по пройденным программам представлены в карточках ниже.</p></div>
     <div><span>КОЛЛЕДЖ · CURRENT</span><h3>Архитектура</h3><p>4-й курс, обучение продолжается. Опыт руководства командой проектировщиков и разработки архитектурных проектов.</p></div>
   </div>
   <div class="document-gallery reveal" aria-label="Сканы образовательных сертификатов">
