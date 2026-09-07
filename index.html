@@ -105,10 +105,11 @@ main{position:relative;z-index:1}
 .section{padding:130px 4vw;border-top:1px solid var(--line)}
 .profile{display:grid;grid-template-columns:9% 1.1fr .9fr;gap:5vw}
 .section-no{font:500 12px var(--mono)}
-.profile h2,.project-head h2,.impact h2,.experience h2,.skills h2,.credentials h2,.education h2,.contact h2{
+.profile h2,.project-head h2,.impact h2,.experience h2,.skills h2,.credentials h2,.press h2,.education h2,.contact h2{
   font:500 clamp(34px,4.4vw,70px)/1.05 var(--display);letter-spacing:-.065em;margin:0;text-transform:uppercase
 }
 h2 em{font-style:normal;color:#777}
+.profile h2 em,.project-head h2 em,.impact h2 em,.experience h2 em,.skills h2 em,.press h2 em{color:var(--accent)}
 .profile-copy>p:last-child{font-size:17px;line-height:1.7;max-width:720px;color:#3b3936}
 .stats{margin:50px 0 0;padding:0;border-top:1px solid var(--line)}
 .stats div{padding:21px 0;border-bottom:1px solid var(--line)}
@@ -139,7 +140,7 @@ h2 em{font-style:normal;color:#777}
 .project-copy>p:last-child{font-size:14px;line-height:1.6;max-width:600px;color:#555}
 .open{text-align:right;color:#222}
 .impact{background:var(--dark);color:#f3f1ec;display:grid;grid-template-columns:.8fr 1.2fr;gap:9vw}
-.impact .kicker{color:#9d9d96}.impact h2 em{color:#9a9a92}
+.impact .kicker{color:#9d9d96}.impact h2 em{color:var(--accent)}
 .impact-list{border-top:1px solid rgba(255,255,255,.18)}
 .impact-card{padding:25px 0;border-bottom:1px solid rgba(255,255,255,.18)}
 .impact-card span{font:500 9px var(--mono);color:var(--accent);letter-spacing:.1em}
@@ -355,7 +356,7 @@ footer{display:flex;justify-content:space-between;padding:22px 4vw;background:#1
   <div class="credentials-grid">
     <article class="credential-card reveal"><span class="year">2025 · DIGITAL BRIDGE</span><div><h3>Благодарственное письмо</h3><p>За волонтёрство, техническую поддержку в демо-зоне и презентацию проекта на международном форуме Digital Bridge.</p></div><div class="credential-proof"><a href="assets/certificates/digital-bridge-2025-appreciation-letter.png" target="_blank" rel="noreferrer"><img src="assets/certificates/digital-bridge-2025-appreciation-letter.png" alt="Благодарственное письмо Digital Bridge 2025"></a></div><b>RECOGNITION / 2025</b></article>
     <article class="credential-card reveal"><span class="year">2026 · АРХИТЕКТУРНЫЙ ФОРУМ</span><div><h3>Благодарственное Turan</h3><p>За активное участие в оформлении и проведении профильного форума, а также успешную презентацию проекта жилого комплекса от лица колледжа.</p></div><div class="credential-proof"><a href="assets/certificates/turan-college-forum-appreciation.jpg" target="_blank" rel="noreferrer"><img src="assets/certificates/turan-college-forum-appreciation.jpg" alt="Благодарственное письмо колледжа Туран"></a></div><b>RECOGNITION / 2026</b></article>
-    <article class="credential-card animo-card reveal"><span class="year">ANIMO NEXT GEN</span><div><h3>Студенческая премия — 3 сертификата</h3><p>Топ-3 (2-е место) по направлению «Программирование и разработка игр в Unreal Engine». Топ-10 по направлению «3D-моделирование и анимация». Сертификат за успешную защиту проекта.</p></div><div class="credential-proof multiple"><a href="assets/certificates/animo-nextgen-2024-top-3.jpg" target="_blank" rel="noreferrer"><img src="assets/certificates/animo-nextgen-2024-top-3.jpg" alt="Сертификат ANIMO NextGen Fest 2024 — Топ-3"></a><a href="assets/certificates/animo-nextgen-2023-top-10.jpg" target="_blank" rel="noreferrer"><img src="assets/certificates/animo-nextgen-2023-top-10.jpg" alt="Сертификат ANIMO NextGen Fest 2023 — Топ-10"></a></div><b>AWARDS / ANIMO</b></article>
+    <article class="credential-card animo-card reveal"><span class="year">ANIMO NEXT GEN</span><div><h3>Призовые места</h3><p>Топ-3 (2-е место) по направлению «Программирование и разработка игр в Unreal Engine». Топ-10 по направлению «3D-моделирование и анимация». Сертификат за успешную защиту проекта.</p></div><div class="credential-proof multiple"><a href="assets/certificates/animo-nextgen-2024-top-3.jpg" target="_blank" rel="noreferrer"><img src="assets/certificates/animo-nextgen-2024-top-3.jpg" alt="Сертификат ANIMO NextGen Fest 2024 — Топ-3"></a><a href="assets/certificates/animo-nextgen-2023-top-10.jpg" target="_blank" rel="noreferrer"><img src="assets/certificates/animo-nextgen-2023-top-10.jpg" alt="Сертификат ANIMO NextGen Fest 2023 — Топ-10"></a></div><b>AWARDS / ANIMO</b></article>
     <article class="credential-card reveal"><span class="year">2026 · TRAILS</span><div><h3>Стажировочная программа TRAILS</h3><p>Прохождение практики в рамках бесплатной образовательной программы Trails. Итоговым результатом стажировки стала разработка мобильного проекта Robot Repair.</p></div><div class="credential-proof"><a href="assets/certificates/trails-robot-repair-internship-certificate.png" target="_blank" rel="noreferrer"><img src="assets/certificates/trails-robot-repair-internship-certificate.png" alt="Сертификат о прохождении стажировочной программы TRAILS и разработке Robot Repair"></a></div><b>INTERNSHIP / GAME DEVELOPMENT</b></article>
   </div>
 </section>
@@ -372,8 +373,8 @@ footer{display:flex;justify-content:space-between;padding:22px 4vw;background:#1
 <section class="education section">
   <p class="kicker reveal">07 / EDUCATION</p>
   <div class="education-grid reveal">
-    <div class="course-list"><span>ANIMO</span><h3>Профильные образовательные программы</h3><p>Сертификаты по пройденным программам представлены в карточках ниже.</p></div>
     <div><span>КОЛЛЕДЖ · CURRENT</span><h3>Архитектура</h3><p>4-й курс, обучение продолжается. Опыт руководства командой проектировщиков и разработки архитектурных проектов.</p></div>
+    <div class="course-list"><span>ANIMO</span><h3>Профильные образовательные программы</h3><p>Сертификаты по пройденным программам представлены в карточках ниже.</p></div>
   </div>
   <div class="document-gallery reveal" aria-label="Сканы образовательных сертификатов">
     <a class="document-link" href="assets/certificates/animo-digital-art-2d-animation.jpg" target="_blank" rel="noreferrer"><img src="assets/certificates/animo-digital-art-2d-animation.jpg" alt="Сертификат ANIMO по цифровому рисунку и 2D-анимации"><span>ANIMO</span><h3>Цифровой рисунок и 2D-анимация</h3></a>
